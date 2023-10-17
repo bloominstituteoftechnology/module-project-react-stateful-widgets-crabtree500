@@ -50,7 +50,7 @@ import {useState} from 'react';
 export default function Counter() {
   /* STEP 1 */
 const [count, setCount] = useState(0)
-
+const isEven = count%2 === 0 
   const increment = () => {
     /* STEP 4 */
     setCount(count + 1) 
@@ -67,7 +67,7 @@ const [count, setCount] = useState(0)
   const style = {
     fontSize: '1.5em',
     marginBottom: '0.3em',
-    color: count %2 === 0 ? 'royalblue' : 'crimson' /* STEP 2 */
+    color: isEven ? 'royalblue' : 'crimson' /* STEP 2 */
   };
 
   return (
@@ -76,7 +76,7 @@ const [count, setCount] = useState(0)
       <div id='count' style={style}>
       {count === 0 ? (
         <p>Number {count} is even</p>
-      ) : count % 2 === 0 ? (
+      ) : isEven ? (
         <p>Number {count} is even</p>
       ) : (
         <p>Number {count} is odd</p>

@@ -64,7 +64,7 @@ const [InputValue, setInputValue] = useState('')
         <p>{InputValue.toUpperCase()}</p>
         </div> {/* STEP 3 */}
       <div>
-        <input id='input' type='text' onChange={changeInput} /> {/* STEP 6 */}
+        <input value={InputValue} id='input' type='text' onChange={changeInput} /> {/* STEP 6 */}
         <button id='resetInput' onClick={reset}>Reset</button>
       </div>
     </div>
